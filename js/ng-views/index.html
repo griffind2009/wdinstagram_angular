@@ -1,5 +1,7 @@
 <h1>WdInstagram</h1>
-<div ng-repeat="instagram in vm.instagrams">{{instagram.author}}, {{instagram.photoUrl}},{{instagram.body}}</div>
+<div ng-repeat="instagram in vm.instagrams">{{instagram.author}},{{instagram.body}}
+<img ng-src="{{instagram.photoUrl}}">
+</div>
 <div>
   <label>Author:</label>
 <input class="author" type="text">
@@ -7,5 +9,6 @@
 <input class="photoUrl" type="text">
 <label>Body:</label>
 <input class="body" type="text">
-  <button ng-click="addGram()">Add to the Gram</button>
+<input type="text" ng-model="vm.newInstagram">
+  <button ng-click="vm.addInstagram()">Add to the Gram</button>
 </div>

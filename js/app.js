@@ -1,7 +1,7 @@
 "use strict";
 
 let wdData = [
-  {author: "a", photoUrl: "", body: "d"},
+  {author: "a", photoUrl: "http://cdn3-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-30.jpg", body: "d"},
   {author: "b", photoUrl: "", body: "e"},
   {author: "c", photoUrl: "", body: "f"}
 ]
@@ -14,7 +14,7 @@ let wdData = [
     "$stateProvider",
     RouterFunction
   ])
-  .controller("showCtrl", [showController])
+  // .controller("showCtrl", [showController])
 
 
 function RouterFunction ($stateProvider) {
@@ -29,8 +29,11 @@ $stateProvider
 
 function wdController () {
   this.instagrams = wdData
+  // this.addInstagram() = function () {
+  //   console.log("working")
+  // }
 }
 
-function showController () {
-  this.instagrams = this.instagram
-}
+// function showController () {
+//   this.instagrams = this.instagram
+// }
