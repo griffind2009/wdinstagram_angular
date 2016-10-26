@@ -1,2 +1,11 @@
 <h1>WdInstagram</h1>
 <div ng-repeat="instagram in vm.instagrams">{{instagram.author}}, {{instagram.photoUrl}},{{instagram.body}}</div>
+<div>
+  <label>Author:</label>
+<input class="author" type="text">
+<label>Photo_Url:</label>
+<input class="photoUrl" type="text">
+<label>Body:</label>
+<input class="body" type="text">
+  <button ng-click="addGram()">Add to the Gram</button>
+</div>

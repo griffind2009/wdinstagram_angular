@@ -14,6 +14,7 @@ let wdData = [
     "$stateProvider",
     RouterFunction
   ])
+  .controller("showCtrl", [showController])
 
 
 function RouterFunction ($stateProvider) {
@@ -28,4 +29,8 @@ $stateProvider
 
 function wdController () {
   this.instagrams = wdData
+}
+
+function showController () {
+  this.instagrams = this.instagram
 }
