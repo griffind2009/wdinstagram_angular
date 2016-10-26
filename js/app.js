@@ -10,7 +10,6 @@ let wdData = [
   angular
   .module("wdinstagram", ["ui.router"])
   .controller("wdCtrl", [ wdController])
-
   .config([
     "$stateProvider",
     RouterFunction
@@ -18,9 +17,15 @@ let wdData = [
 
 
 function RouterFunction ($stateProvider) {
-console.log("Working")
+$stateProvider
+.state ( "index", {
+  url: "/",
+  controller: "wdCtrl",
+  controllerAs: "vm",
+  templateUrl: "js/ng-views/index.html"
+})
 }
 
 function wdController () {
-  this.wd = wdData
+  this.instagrams = wdData
 }
