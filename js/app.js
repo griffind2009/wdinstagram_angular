@@ -14,7 +14,7 @@ let wdData = [
     "$stateProvider",
     RouterFunction
   ])
-  // .controller("showCtrl", [showController])
+  .controller("showCtrl", [showController])
 
 
 function RouterFunction ($stateProvider) {
@@ -25,15 +25,21 @@ $stateProvider
   controllerAs: "vm",
   templateUrl: "js/ng-views/index.html"
 })
+.state ("instagramShow", {
+  url: "/instagrams/:id",
+  controller: "showCtrl",
+  controllerAs: "vm",
+  templateUrl: "js/ng-views/show.html"
+})
 }
 
 function wdController () {
   this.instagrams = wdData
-  // this.addInstagram() = function () {
-  //   console.log("working")
-  // }
+ this.addInstagram = function () {
+   console.log("working")
+ }
 }
 
-// function showController () {
-//   this.instagrams = this.instagram
-// }
+function showController () {
+  this.instagram = {}
+}

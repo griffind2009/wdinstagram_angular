@@ -1,6 +1,7 @@
 <h1>WdInstagram</h1>
-<div ng-repeat="instagram in vm.instagrams">{{instagram.author}},{{instagram.body}}
-<img ng-src="{{instagram.photoUrl}}">
+<div ng-repeat="instagram in vm.instagrams">
+  <a data-ui-sref="instagramShow({id: $index})">{{instagram.author}},{{instagram.body}}</a>
+  <img ng-src="{{instagram.photoUrl}}">
 </div>
 <div>
   <label>Author:</label>
